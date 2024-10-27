@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba'); /* Link gambar background romantis */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang gelap dengan transparansi */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.message {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Spasi antara tombol */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Styling untuk gambar pocong */
+.pocong-image {
+    width: 300px; /* Atur ukuran gambar sesuai keinginan */
+    margin-top: 20px; /* Tambahkan margin atas */
+    opacity: 0; /* Awalnya tidak terlihat */
+    transform: scale(0.5); /* Ukuran awal lebih kecil */
+    animation: fadeInScale 1s forwards, shake 0.5s ease-in-out 1s 3; /* Memanggil animasi */
+}
+
+/* Animasi fade-in dan scale */
+@keyframes fadeInScale {
+    to {
+        opacity: 1; /* Akhirnya terlihat */
+        transform: scale(1); /* Ukuran normal */
+    }
+}
+
+/* Animasi goyang (shake) */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
